@@ -11,7 +11,7 @@ const ProductShowcase = ({ products }: ShowcaseProps) => {
   return (
     <>
       <div className="w-full">
-        <div className={'grid gap-6'}>
+        <div className={'flex flex-wrap'}>
           {products?.map((product, index) => (
             <Link
               key={`productCard${index}`}

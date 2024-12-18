@@ -1,22 +1,20 @@
 'use client';
-import { useState } from 'react';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
-// components
 import { Button } from '@/components/ui/button';
 
-// assets
 import ProductsJSON from '@/assets/json/products.json';
-import { ProductDetails } from '../../components/product-card';
-import { ShoppingBag, ShoppingCart, Star } from 'lucide-react';
 import { formatNumber } from '@/lib/utils';
+import { Minus, Plus, ShoppingBag, ShoppingCart, Star } from 'lucide-react';
+import { ProductDetails } from '../../components/product-card';
 import { ProductShowcase } from '../../components/product-showcase';
 
 export default function Products() {
   const router = useRouter();
-  //   const [itemCount, setItemCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   const productDetails = ProductsJSON[0];
 
@@ -24,7 +22,10 @@ export default function Products() {
 
   return (
     <main className="flex flex-col w-full min-h-screen items-center pb-8">
-      <div className="w-content flex pt-5 gap-12">
+      <div
+        className="
+      max-w-screen-lg flex pt-5 gap-12"
+      >
         <div className="border p-2 rounded-xl">
           <div className="w-[376px] h-[376px] relative">
             <Image
@@ -53,7 +54,7 @@ export default function Products() {
           <div className="text-4xl font-semibold">
             Rp {formatNumber(productDetails.price)} / {productDetails.unit}
           </div>
-          <div className="text-gray-400">
+          <div className="text-gray-400 text-justify">
             Wortel dapat dimakan dengan berbagai cara. Pada wortel mentah hanya
             3% β-ririencha yang dilepaskan selama proses pencernaan, proses ini
             dapat ditingkatkan hingga 39% melalui pulping, memasaknya dan
@@ -61,17 +62,28 @@ export default function Products() {
             dan kandungan vitaminnya hampir sama dengan wortel yang dimakan
             begitu saja.
           </div>
-          <div className="flex gap-4 items-center">
-            {/* <CommonStepper
-              count={itemCount}
-              onChange={(count) => setItemCount(count)}
-            /> */}
-            <Button className={'py-1 px-4 bg-leaf text-white leading-4'}>
+          <div className="flex gap-4 items-center w-full">
+            <div className="flex gap-3 items-center ">
+              <Button
+                onClick={() => setCount(count - 1)}
+                variant={'ghost'}
+              >
+                <Minus stroke="green" />{' '}
+              </Button>
+              <span>{count}</span>
+              <Button
+                onClick={() => setCount(count + 1)}
+                variant={'ghost'}
+              >
+                <Plus stroke="green" />{' '}
+              </Button>
+            </div>
+            <Button className={'py-1 px-4 bg-green-600 text-white leading-4 '}>
               <ShoppingCart className="w-5 h-5 mr-2" />
               Masukkan Keranjang
             </Button>
             <Button
-              className={'py-1 px-4 bg-carrot text-white leading-4'}
+              className={'py-1 px-4 bg-orange-600 text-white leading-4'}
               onClick={() => {
                 router.push('/checkout');
               }}
@@ -82,8 +94,10 @@ export default function Products() {
           </div>
         </div>
       </div>
-      <div className="w-content separator my-6" />
-      <div className="w-content">
+      <div
+        className="
+      max-w-screen-lg mt-4"
+      >
         <div className="flex justify-between mb-6 items-center">
           <div className="text-leaf text-3xl font-semibold">
             Rekomendasi buat kamu
