@@ -4,11 +4,13 @@ import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Link from 'next/link';
 import React from 'react';
+import FormSignUp from './components/form-sign-up';
 
 const page = () => {
   return (
     <>
       <div className="flex flex-col w-[100%] gap-4 items-center">
+        <FormSignUp />
         <div className="tracking-wider text-base text-gray-500">
           <div className="text-center h-9">atau</div>
           <Button
@@ -34,7 +36,7 @@ const page = () => {
         </Button>
       </div>
 
-      <div className="tracking-wider text-base text-gray-500 mt-12">
+      <div className="tracking-wider text-base text-gray-500 mb-4">
         Sudah memiliki akun?{' '}
         <Link href={'/sign-in'}>
           <span className={'font-semibold text-river'}>Masuk</span>
