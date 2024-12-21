@@ -185,7 +185,7 @@ const Footer = () => {
       <div className="w-full py-4 flex flex-col items-center">
         <div className="w-full max-w-screen-lg px-4 flex justify-between items-center text-gray-600">
           <div>
-            Copyright &copy; 2023{' '}
+            Copyright &copy; 2024{' '}
             <Link
               href="/"
               className="text-orange-500"

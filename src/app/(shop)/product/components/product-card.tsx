@@ -41,9 +41,10 @@ export function ProductCard({ details }: CardProps) {
         <AspectRatio ratio={1 / 1}>
           <Image
             src={details.img}
-            layout="fill"
             alt=""
-            objectFit="contain"
+            width={260}
+            height={260}
+            className="object-cover"
           />
         </AspectRatio>
       </div>

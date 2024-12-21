@@ -17,7 +17,7 @@ const FormSignUp = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <form className="flex flex-col w-[300px]  gap-4 items-center">
+    <form className="flex flex-col w-[300px]  gap-2 items-center mt-4">
       <div className="w-full  text-3xl font-semibold tracking-widest mb-2 text-center">
         Daftar akun anda
       </div>

@@ -26,7 +26,7 @@ import { Bell, Heart, Settings, ShoppingCartIcon } from 'lucide-react';
 import Link from 'next/link';
 import LogoVegeta from '@/assets/icons/logo-vegeta';
 const Header = () => {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
 
   const navLinks = [
     { href: '/', label: 'Beranda' },
@@ -41,7 +41,6 @@ const Header = () => {
         <Link
           href={link.href}
           legacyBehavior
-          passHref
         >
           <NavigationMenuLink className="font-normal">
             {link.label}
@@ -62,10 +61,10 @@ const Header = () => {
 
         {isLoggedIn ? (
           <div className="flex gap-4 items-center">
-            <Badge>
+            <Badge variant={'secondary'}>
               <Message />
             </Badge>
-            <Badge>
+            <Badge variant={'secondary'}>
               <Bell />
             </Badge>
             <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden relative">
@@ -73,7 +72,9 @@ const Header = () => {
             </div>
             <div className="flex flex-col w-[127px]">
               <span className="text-xs">Hi, Apa Kabar?</span>
-              <span className="text-sm font-semibold">Taufan Fadhillah</span>
+              <span className="text-sm font-semibold">
+                Muhamad Mufid Bachri
+              </span>
             </div>
             <DropdownMenu>
               <DropdownMenuTrigger>

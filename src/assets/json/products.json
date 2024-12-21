@@ -1,16 +1,16 @@
 [
   {
-    "img": "/vegetables.jpeg",
-    "name": "Kembang Kol",
+    "img": "https://res.cloudinary.com/drw2piiwx/image/upload/v1734761352/product-ecomerce/pmv44nhxeao4egtjdmtk.png",
+    "name": "Buah Naga",
     "category": "Aneka Sayur",
-    "price": 4000,
+    "price": 15000,
     "unit": "kg",
     "rating": 4,
     "sold": 10
   },
   {
-    "img": "/vegetables.jpeg",
-    "name": "Wortel Lembang",
+    "img": "https://res.cloudinary.com/drw2piiwx/image/upload/v1734761351/product-ecomerce/bgwgcalirlp5ortomua0.jpg",
+    "name": "Daun Bawang",
     "category": "Aneka Sayur",
     "price": 8000,
     "unit": "kg",
@@ -18,7 +18,7 @@
     "sold": 56
   },
   {
-    "img": "/vegetables.jpeg",
+    "img": "https://res.cloudinary.com/drw2piiwx/image/upload/v1734761351/product-ecomerce/zqmush9ifhylsinotq5g.jpg",
     "name": "Bayam Brazil",
     "category": "Aneka Sayur",
     "price": 3500,
@@ -27,8 +27,8 @@
     "sold": 64
   },
   {
-    "img": "/vegetables.jpeg",
-    "name": "Sawi Putih",
+    "img": "https://res.cloudinary.com/drw2piiwx/image/upload/v1734761351/product-ecomerce/rcrmsx5frwhclhdnirvj.png",
+    "name": "Jamur",
     "category": "Aneka Sayur",
     "price": 2000,
     "unit": "kg",
